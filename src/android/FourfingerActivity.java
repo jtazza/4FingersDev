@@ -233,13 +233,19 @@ public class FourfingerActivity extends Activity  {
 
         ExportConfig.setFormat(IBiometricFormats.TemplateFormat.FORMAT_JSON);
 
-        if(BestFingerRight == RIGHT_THUMB){
-            ExportConfig.setFingersToCapture(Arrays.asList(ExportConfig.FingerID.THUMB_RIGHT ));
-        }else if(BestFingerLeft == LEFT_THUMB){
-            ExportConfig.setFingersToCapture(Arrays.asList(ExportConfig.FingerID.THUMB_LEFT ));
-        }else{
-            ExportConfig.setFingersToCapture(ExportConfig.ExportMode.FOUR_F_RIGHT_SWITCHABLE);
-        }
+              if (BestFingerRight == RIGHT_THUMB) {
+                    ExportConfig.setFingersToCapture(Arrays.asList(ExportConfig.FingerID.THUMB_RIGHT));
+
+                } else if (BestFingerLeft == LEFT_THUMB) {
+                    ExportConfig.setFingersToCapture(Arrays.asList(ExportConfig.FingerID.THUMB_LEFT));
+
+                } else if (BestFingerRight == RIGHT_INDEX || BestFingerRight == RIGHT_MIDDLE || BestFingerRight == RIGHT_RING || BestFingerRight == RIGHT_PINKY){
+                    ExportConfig.setFingersToCapture(ExportConfig.ExportMode.FOUR_F_RIGHT_ENFORCED);
+
+                } else if (BestFingerLeft == LEFT_INDEX || BestFingerLeft == LEFT_MIDDLE || BestFingerLeft == LEFT_RING || BestFingerLeft == LEFT_PINKY){
+                    ExportConfig.setFingersToCapture(ExportConfig.ExportMode.FOUR_F_LEFT_ENFORCED);
+
+                }
 
 
         ExportConfig.setPack_bmp(false);
