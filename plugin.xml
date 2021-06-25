@@ -43,11 +43,11 @@ id="cordova-plugin-entelfingerplugin" version="0.0.1">
             </activity>
 
             <activity android:name="com.outsystemsenterprise.entel.PEMiEntel.cordova.plugin.customFourFActivity"
-				android:theme="@style/AppTheme">
-				<meta-data
+				    android:theme="@style/AppTheme">
+			 	    <meta-data
                     android:name="com.veridiumid.sdk.component.config"
                     android:value="uid=4F, optional=false, validator=com.veridiumid.sdk.fourf.FourFValidator" />
-            </activity>
+            </activity> 
 
             <!--activity android:name="bio.insolutions.veridium.entel.piloto.cordova.plugin.CustomFourFBiometricsActivity"
             android:theme="@style/AppTheme">
@@ -75,9 +75,7 @@ id="cordova-plugin-entelfingerplugin" version="0.0.1">
         <!-- local aar dependencies -->
         <lib-file src="src/android/libs/veridium-analytics-release.aar"/>
         <lib-file src="src/android/libs/veridium-core-release.aar"/>
-        <lib-file src="src/android/libs/veridium-fourf-agent-ui-release.aar"/>
-        <lib-file src="src/android/libs/veridium-fourf-authenticator-ui-release.aar"/>
-        <lib-file src="src/android/libs/veridium-fourf-camera-release.aar"/>
+        <lib-file src="src/android/libs/veridium-fourf-ui-release.aar"/>
         <lib-file src="src/android/libs/veridium-fourf-release.aar"/>
         <lib-file src="src/android/libs/veridium-sdk-release.aar"/>
         <lib-file src="src/android/libs/veridium-secure-data-release.aar"/>
