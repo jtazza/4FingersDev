@@ -10,7 +10,12 @@ import com.veridiumid.sdk.fourf.FourFInterface;
 import com.veridiumid.sdk.fourf.FourFBiometricsActivity;
 import com.veridiumid.sdk.fourf.FourFUIInterface;
 import com.veridiumid.sdk.model.data.persistence.IKVStore;
+import com.veridiumid.sdk.fourf.ui.FourFUIFragment;
 import com.veridiumid.sdk.model.data.persistence.impl.InMemoryKVStore;
+
+
+
+
 
 /**
  *  Extends vFaceBiometricsActivity to set storage to use and which UI to show.
