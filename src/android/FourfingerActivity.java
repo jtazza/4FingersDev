@@ -104,7 +104,7 @@ public class FourfingerActivity extends Activity  {
         BestFingerRight = getIntent().getIntExtra("RightFinger",2);
         BestFingerLeft = getIntent().getIntExtra("LeftFinger",7);
 
-	Toast.makeText(FourfingerActivity.this,FourfingerActivity.this,"Mano Izquierda" + BestFingerLeft + "-" + "Mano Derecha" + BestFingerRight, Toast.LENGTH_SHORT).show();
+	Toast.makeText(FourfingerActivity.this,"Mano Code" + BestFingerLeft + "-" + "Mano Code" + BestFingerRight, Toast.LENGTH_SHORT).show();
 	    
         Log.d(TAG,"intent got. Left " + String.valueOf(BestFingerLeft) + "Right " + String.valueOf(BestFingerRight) );
 
