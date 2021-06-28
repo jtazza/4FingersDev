@@ -53,6 +53,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+import android.widget.Toast;
 
 public class FourfingerActivity extends Activity  {
 
@@ -103,6 +104,8 @@ public class FourfingerActivity extends Activity  {
 
         BestFingerRight = getIntent().getIntExtra("RightFinger",2);
         BestFingerLeft = getIntent().getIntExtra("LeftFinger",7);
+	    
+	   Toast.makeText(FourfingerActivity.this,"Mano Code" + BestFingerLeft + "-" + "Mano Code" + BestFingerRight, Toast.LENGTH_SHORT).show();
 	    
         Log.d(TAG,"intent got. Left " + String.valueOf(BestFingerLeft) + "Right " + String.valueOf(BestFingerRight) );
 
@@ -235,19 +238,23 @@ public class FourfingerActivity extends Activity  {
 
               if (BestFingerRight == RIGHT_THUMB) {
                     ExportConfig.setFingersToCapture(Arrays.asList(ExportConfig.FingerID.THUMB_RIGHT));
-		      
+		      Toast.makeText(FourfingerActivity.this,"Pulgar Derecho", Toast.LENGTH_SHORT).show();
+
 
                 } else if (BestFingerLeft == LEFT_THUMB) {
                     ExportConfig.setFingersToCapture(Arrays.asList(ExportConfig.FingerID.THUMB_LEFT));
-		      
+		      Toast.makeText(FourfingerActivity.this,"Pulgar Izquierdo", Toast.LENGTH_SHORT).show();
+
 		      
                 } else if (BestFingerRight == RIGHT_INDEX || BestFingerRight == RIGHT_MIDDLE || BestFingerRight == RIGHT_RING || BestFingerRight == RIGHT_PINKY){
                     ExportConfig.setFingersToCapture(ExportConfig.ExportMode.FOUR_F_RIGHT_ENFORCED);
-		      
+		      Toast.makeText(FourfingerActivity.this,"Mejor Mano Izquierda" + BestFingerLeft + "-" + "Mejor Mano Derecha" + BestFingerRight, Toast.LENGTH_SHORT).show();
+
 
                 } else if (BestFingerLeft == LEFT_INDEX || BestFingerLeft == LEFT_MIDDLE || BestFingerLeft == LEFT_RING || BestFingerLeft == LEFT_PINKY){
                     ExportConfig.setFingersToCapture(ExportConfig.ExportMode.FOUR_F_LEFT_ENFORCED);
-		     
+		     Toast.makeText(FourfingerActivity.this,"Mano Izquierda" + BestFingerLeft + "-" + "Mano Derecha" + BestFingerRight, Toast.LENGTH_SHORT).show();
+
 		      
                 }
 
