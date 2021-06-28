@@ -103,26 +103,9 @@ public class FourfingerActivity extends Activity  {
         Log.d(TAG,"On create");
 
 	    
-	/**    
-        BestFingerRight = getIntent().getIntExtra("RightFinger",2);
-        BestFingerLeft = getIntent().getIntExtra("LeftFinger",7);
-	*/
-	    
-	/** Validacion Parametros de Entrada*/
-	    
-	if (BestFingerRight == 0) {
-		BestFingerRight = getIntent().getIntExtra("RightFinger",0);
-        }else{
-          BestFingerRight = getIntent().getIntExtra("RightFinger");
-        }
 	
-	    
-	if (BestFingerLeft == 0) {
-		 BestFingerLeft = getIntent().getIntExtra("LeftFinger",0);
-        }else{
-         	 BestFingerLeft = getIntent().getIntExtra("LeftFinger");
-        }
-	    
+        BestFingerRight = getIntent().getIntExtra("RightFinger",0);
+        BestFingerLeft = getIntent().getIntExtra("LeftFinger",0);
 	    
 	   Toast.makeText(FourfingerActivity.this,"Mano Code" + BestFingerLeft + "-" + "Mano Code" + BestFingerRight, Toast.LENGTH_SHORT).show();
 	    
