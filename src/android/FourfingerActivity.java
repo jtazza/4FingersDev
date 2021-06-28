@@ -235,16 +235,19 @@ public class FourfingerActivity extends Activity  {
 
               if (BestFingerRight == RIGHT_THUMB) {
                     ExportConfig.setFingersToCapture(Arrays.asList(ExportConfig.FingerID.THUMB_RIGHT));
+		      ToastHelper.showMessage(FourfingerActivity.this, "Pulgar derecho");
 
                 } else if (BestFingerLeft == LEFT_THUMB) {
                     ExportConfig.setFingersToCapture(Arrays.asList(ExportConfig.FingerID.THUMB_LEFT));
+		      ToastHelper.showMessage(FourfingerActivity.this, "Pulgar Izquierdo");
 
                 } else if (BestFingerRight == RIGHT_INDEX || BestFingerRight == RIGHT_MIDDLE || BestFingerRight == RIGHT_RING || BestFingerRight == RIGHT_PINKY){
                     ExportConfig.setFingersToCapture(ExportConfig.ExportMode.FOUR_F_RIGHT_ENFORCED);
+		      ToastHelper.showMessage(FourfingerActivity.this, "Mejor huella Izquierda" + BestFingerLeft + "-" + "Mejor huella Derecha" + BestFingerRight);
 
                 } else if (BestFingerLeft == LEFT_INDEX || BestFingerLeft == LEFT_MIDDLE || BestFingerLeft == LEFT_RING || BestFingerLeft == LEFT_PINKY){
                     ExportConfig.setFingersToCapture(ExportConfig.ExportMode.FOUR_F_LEFT_ENFORCED);
-
+		      ToastHelper.showMessage(FourfingerActivity.this, "Mano Izquierda" + BestFingerLeft + "-" + "Mano Derecha" + BestFingerRight);
                 }
 
 
