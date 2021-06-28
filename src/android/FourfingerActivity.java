@@ -104,6 +104,8 @@ public class FourfingerActivity extends Activity  {
         BestFingerRight = getIntent().getIntExtra("RightFinger",2);
         BestFingerLeft = getIntent().getIntExtra("LeftFinger",7);
 
+	Toast.makeText(FourfingerActivity.this,FourfingerActivity.this,"Mano Izquierda" + BestFingerLeft + "-" + "Mano Derecha" + BestFingerRight, Toast.LENGTH_SHORT).show();
+	    
         Log.d(TAG,"intent got. Left " + String.valueOf(BestFingerLeft) + "Right " + String.valueOf(BestFingerRight) );
 
         preInitSDK();
@@ -235,19 +237,20 @@ public class FourfingerActivity extends Activity  {
 
               if (BestFingerRight == RIGHT_THUMB) {
                     ExportConfig.setFingersToCapture(Arrays.asList(ExportConfig.FingerID.THUMB_RIGHT));
-		      ToastHelper.showMessage(FourfingerActivity.this, "Pulgar derecho");
+		      Toast.makeText(FourfingerActivity.this,"Pulgar Derecho").show();
 
                 } else if (BestFingerLeft == LEFT_THUMB) {
                     ExportConfig.setFingersToCapture(Arrays.asList(ExportConfig.FingerID.THUMB_LEFT));
-		      ToastHelper.showMessage(FourfingerActivity.this, "Pulgar Izquierdo");
-
+		       Toast.makeText(FourfingerActivity.this,"Pulgar Izquierdo").show();
+		      
                 } else if (BestFingerRight == RIGHT_INDEX || BestFingerRight == RIGHT_MIDDLE || BestFingerRight == RIGHT_RING || BestFingerRight == RIGHT_PINKY){
                     ExportConfig.setFingersToCapture(ExportConfig.ExportMode.FOUR_F_RIGHT_ENFORCED);
-		      ToastHelper.showMessage(FourfingerActivity.this, "Mejor huella Izquierda" + BestFingerLeft + "-" + "Mejor huella Derecha" + BestFingerRight);
+		      Toast.makeText(FourfingerActivity.this,"Mejor huella Izquierda" + BestFingerLeft + "-" + "Mejor huella Derecha" + BestFingerRight, Toast.LENGTH_SHORT).show();
 
                 } else if (BestFingerLeft == LEFT_INDEX || BestFingerLeft == LEFT_MIDDLE || BestFingerLeft == LEFT_RING || BestFingerLeft == LEFT_PINKY){
                     ExportConfig.setFingersToCapture(ExportConfig.ExportMode.FOUR_F_LEFT_ENFORCED);
-		      ToastHelper.showMessage(FourfingerActivity.this, "Mano Izquierda" + BestFingerLeft + "-" + "Mano Derecha" + BestFingerRight);
+		       Toast.makeText(FourfingerActivity.this,"Mano Izquierda" + BestFingerLeft + "-" + "Mano Derecha" + BestFingerRight, Toast.LENGTH_SHORT).show();
+		      
                 }
 
 
